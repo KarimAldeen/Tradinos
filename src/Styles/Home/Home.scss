@@ -1,0 +1,518 @@
+.Home_Page {
+    width: 100%;
+    min-height: 2000px;
+.Pages{
+    height: 200vh;
+}
+    .HeroSection {
+        overflow: hidden;
+        width: 100%;
+        min-height: 100vh;
+        background-color: #1C2225;
+        color: var(--white);
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 4rem;
+            bottom: 0rem;
+            height: 360px;
+            background-color: #00A7E1;
+            width: 125px;
+            transform: rotate(45deg);
+            border-radius: 65rem;
+            -webkit-filter: blur(200px);
+            -moz-filter: blur(200px);
+            -ms-filter: blur(200px);
+            filter: blur(200px);
+            outline: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 4rem;
+            top: 0rem;
+            height: 360px;
+            background-color: #00A7E1;
+            width: 125px;
+            transform: rotate(45deg);
+            border-radius: 65rem;
+            // -webkit-filter: blur(200px);
+            // -moz-filter: blur(200px);/
+            // -ms-filter: blur(200px);
+            filter: blur(200px);
+            // outline: none;
+        }
+
+        .in_HeroSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin-inline: auto;
+            padding-top: 120px;
+            // visibility: hidden;
+
+
+
+            >h1 {
+                font-size: 6vw;
+                text-align: center;
+                background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0.21) 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: center;
+                font-weight: bold;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0rem;
+                    bottom: -20px;
+                    width: 230px;
+                    height: 20px;
+
+                    background-image: url('../../../public/Home/UnderCurle.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    z-index: 3;
+
+                }
+
+            }
+
+            >p {
+                font-size: 1.7vw;
+                width: 60%;
+                text-align: center;
+                margin-block: 50px;
+                color: var(--white);
+            }
+
+            .Buttons {
+                display: flex;
+                gap: 2px;
+
+                button {
+                    background: var(--primary);
+                    color: var(--white);
+                    font-weight: bold;
+                    padding: 10px 40px;
+                    border-radius: 30px;
+                    outline: none;
+                    border: 1px solid var(--primary);
+
+                    &:hover {
+                        background: transparent;
+                        border-color: var(--white);
+
+                    }
+                }
+
+                button:first-child {
+                    background: transparent;
+                    border-color: var(--white);
+
+                    &:hover {
+                        border-color: var(--primary);
+                        background: var(--primary);
+
+                    }
+                }
+
+            }
+
+            >span {
+                margin-block: 30px;
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+
+                >div {
+                    display: flex;
+                    align-items: flex-end;
+
+                    >p {
+                        transform: translateY(10px);
+                    }
+                }
+
+            }
+
+            .LogoCards {
+                width: 90vw;
+                padding-block: 50px;
+                animation: fade 6s ease-in-out;
+                animation-fill-mode: forwards;
+
+                @keyframes fade {
+                    from {
+                        opacity: 0;
+                        transform: translate3d(-1600px, 0, 0);
+                        width: 20vw;
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: none;
+                        width: 90vw;
+
+                    }
+                }
+
+
+                .LogoCard {
+                    img {
+                        width: 100px;
+                        height: 50px;
+                        cursor: pointer;
+
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+
+    .OurProjects {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        max-width: 1600px;
+        
+        margin-inline: auto;
+
+        >h1 {
+            font-weight: bold;
+            margin-block: 50px;
+
+        }
+
+        .in_OurProjects {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            >span {
+                width: 50%;
+                position: relative;
+                height: 500px;
+
+                .Image {
+                    z-index: 4;
+                    width: 100%;
+                    height: 500px;
+                    position: absolute;
+                    top: 0;
+                   
+                   
+                }
+                .BgImage{
+                    z-index: 1;
+                    width: 120%;
+                    height: auto;
+                    position: absolute;
+                    bottom: 20%;
+                    left: -20%;
+                }
+               
+
+            }
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                width: 50%;
+                position: relative;
+                max-height: 700px;
+
+
+                >img {
+                    width: 70%;
+
+                }
+
+                .BG {
+                    transition: 1s ease-in-out;
+                    width: 90%;
+                    height: 65%;
+                    position: absolute;
+                    z-index: 2;
+                    left: 20%;
+                    top: 25%;
+
+
+                }
+
+                .Swiper_Controller {
+                    position: absolute;
+                    top: -8%;
+                    left: 30%;
+                    z-index: 5;
+                    width: 160px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    >div {
+                        background: var(--white);
+                        padding: 8px 12px;
+                        border-radius: 10px;
+                        @include Shadow;
+
+                        svg {
+                            color: var(--primary);
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                >div {
+                    margin-top: 90px;
+
+                    z-index: 2;
+
+                    border-radius: 26px;
+                    background-color: var(--bg);
+                    box-shadow: 0px 0px 20px #0075C929;
+                    padding-inline: 2rem 4rem;
+                    padding-block: 2.6rem;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    z-index: 2;
+                    color: var(--text);
+                    position: relative;
+
+                    p {
+                        font-size: 17px;
+                        transition: transform 0.5s ease-out;
+
+                        @keyframes identifier {
+                            from {
+                                transform: translateX(100%);
+
+                            }
+
+                            to {
+                                transform: translateX(0%);
+                            }
+                        }
+                    }
+
+                    h2 {
+                        color: var(--primary);
+                        font-weight: bold;
+                        font-size: 40px;
+                    }
+
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: transparent;
+                        border: 2px solid var(--primary);
+                        border-radius: 30px;
+                        color: var(--primary);
+                        padding: 6px 20px;
+                        width: 220px;
+                        text-wrap: nowrap;
+                        opacity: 1;
+                        height: 50px;
+                        transition: .3s ease-in-out;
+                        font-size: 17px;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+.OurHow{
+    height: 450px;
+    width: 100%;
+    background-image: url('../../../public/Home/our_how_to_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position : 50% 100% ;
+    background-attachment: fixed;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: #333;
+        opacity: .4;
+    }
+    padding: 5%;
+    display: flex;
+  
+   
+    color: var(--white);
+    >div{
+        width: 40%;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 15%;
+        height: 100%;
+        >button{
+            background: transparent;
+            color: var(--white);
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 30px;
+            outline: none;
+            border: 1px solid var(--white);
+                width: 40%;
+                font-size: 14px;
+            &:hover {   
+                background: transparent;
+                border-color: var(--white);
+
+            }
+        }
+
+    }
+}
+.Contact{
+    height: 100vh;
+    width: 100%;
+}
+}
+
+
+
+//// animation
+
+.Home_Page {
+
+    .in_HeroSection {
+
+
+
+        >h1 {
+            // visibility: hidden;
+            animation: fadeInBottom 1s ease-in-out;
+
+            &::after {
+                animation: fadeInBottom 2s ease-in-out;
+
+            }
+
+
+        }
+
+        >p {
+            // visibility: hidden;
+            animation: fadeInBottom 1.4s ease-in-out;
+
+        }
+
+        .Buttons {
+            @include fadeTow(4s)
+        }
+
+        >span {
+            @include fadeThree(4s)
+        }
+
+        .LogoCards {}
+
+    }
+
+    .OurProjects {
+
+        .animate-out {
+            .ProjectContent>*:not(.Swiper_Controller) {
+                opacity: 0;
+            }
+
+                    >div {
+
+               
+                        >img {
+                            transform: translateX(1000px);
+
+                            transition: 1s ease-in-out;
+
+                        }
+        
+                    }
+                
+ 
+                .Image {
+                   
+                    transform: translateX(-1000px);
+                    transition: 1s ease-in-out;
+                   
+                   
+                }
+                .BgImage{
+                    transition: 1s ease-in-out;
+                    transform: translateX(1000px);
+                }
+
+        }
+
+        .ProjectContent>*:not(.Swiper_Controller) {
+            animation: opacityIn 2s ease-in-out;
+            transition: 1s ease-in-out;
+        }
+
+        .in_OurProjects {
+            .Image {
+        
+                transition: 1s ease-in-out;
+                animation: fadeInLeft 2s ease-in-out;
+
+               
+            }
+            .BgImage{
+                transition: 1s ease-in-out;
+              
+                animation: fadeInRight 2s ease-in-out;
+
+            }
+            >div {
+
+               
+                >img {
+                    animation: fadeInRight 2s ease-in-out;
+                    transition: 1s ease-in-out;
+
+                }
+
+            }
+        }
+    }
+
+
+}
